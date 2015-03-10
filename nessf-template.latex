@@ -1,0 +1,103 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage[paper=letterpaper, margin=1in, nohead, pdftex]{geometry}
+\usepackage{fontspec}
+\usepackage{textcomp}
+\usepackage{ifthen}
+\usepackage[small,compact]{titlesec}
+\usepackage{graphicx}			% Nice graphics, optional
+\usepackage{siunitx}
+\usepackage[version=3]{mhchem}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{ifthen}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{paralist}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage[font=footnotesize]{caption}
+
+\newfontfamily\HNLight[
+   Ligatures=TeX,
+   Scale=0.9,
+   BoldFont={Helvetica Neue},
+   UprightFont={Helvetica Neue Light},
+   ItalicFont={Helvetica Neue Light Italic}
+  ]{Helvetica Neue Light}
+
+\newfontfamily\HN[
+   Ligatures=TeX,
+   Scale=0.9,
+   BoldFont={Helvetica Neue Medium},
+   UprightFont={Helvetica Neue},
+   ItalicFont={Helvetica Neue Italic}
+  ]{Helvetica Neue}
+
+\newfontfamily\Gotham[
+   Ligatures=TeX,
+   Scale=0.9,
+   BoldFont={Gotham Bold},
+   UprightFont={Gotham Book},
+   ItalicFont={Gotham Light Italic}
+  ]{Gotham Book}
+
+\newfontfamily\GothamLight[
+   Ligatures=TeX,
+   Scale=0.9,
+   BoldFont={Gotham Book},
+   UprightFont={Gotham Light},
+   ItalicFont={Gotham Light Italic}
+  ]{Gotham Light}
+
+% biblatex options
+%\renewcommand{\bibfont}{\small}	% Change the font size of the bibliography
+%\renewcommand{\bibsection}{\subsubsection*{\refname}}
+%\newcommand{\tild}{\texttildelow}
+
+\newcommand{\figp}[1]{[Figure \ref{fig:#1}]}
+\newcommand{\figt}[1]{Figure \ref{fig:#1}}
+\newcommand{\tabref}[1]{[Table \ref{tab:#1}]}
+\newcommand{\appref}[1]{[see Appendix \ref{app:#1}]}
+\newcommand{\km}[1]{\SI{#1}{\kilo\meter}}
+
+%\usepackage[super]{natbib}
+%\usepackage{natbib}
+\usepackage[numbers,sort&compress]{natbib}
+
+%\makeatletter
+%\DeclareRobustCommand\citep
+%    {\begingroup\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
+%     \@ifstar{\footnotesize\HN\NAT@fulltrue\NAT@citetp}{\footnotesize\HN\NAT@fullfalse\NAT@citetp}}
+%\makeatother
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+
+\setcounter{secnumdepth}{2}
+
+\titleformat{\section}{\HN\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\HN\normalsize\bfseries}{\thesubsection}{3pt}{}
+\titleformat{\subsubsection}[runin]{\HN\small\bfseries}{\thesubsubsection}{3pt}{}
+
+
+\renewcommand{\bibfont}{\scriptsize}
+\setlength{\bibsep}{0pt}
+
+\begin{document}
+
+\noindent{\large\HN\textbf{$title$}}
+
+$body$
+
+\twocolumn
+
+{\tiny
+\bibliography{$biblio-files$}
+\bibliographystyle{agu08_nodoi}
+%/Users/Daven/Resources/Papers/BibTeX/styles/agu08
+}
+
+\end{document}
+
+
