@@ -50,6 +50,14 @@
    ItalicFont={Gotham Light Italic}
   ]{Gotham Light}
 
+\newfontfamily\Chaparral[
+   Ligatures=TeX,
+   Scale=0.9,
+   BoldFont={Chaparral Pro Bold},
+   UprightFont={Chaparral Pro},
+   ItalicFont={Chaparral Pro Italic}
+  ]{Chaparral Pro}
+
 % biblatex options
 %\renewcommand{\bibfont}{\small}	% Change the font size of the bibliography
 %\renewcommand{\bibsection}{\subsubsection*{\refname}}
@@ -65,20 +73,20 @@
 %\usepackage{natbib}
 \usepackage[numbers,sort&compress]{natbib}
 
-%\makeatletter
-%\DeclareRobustCommand\citep
-%    {\begingroup\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
-%     \@ifstar{\footnotesize\HN\NAT@fulltrue\NAT@citetp}{\footnotesize\HN\NAT@fullfalse\NAT@citetp}}
-%\makeatother
+\makeatletter
+\DeclareRobustCommand\citep
+    {\begingroup\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
+     \@ifstar{\footnotesize\HN\NAT@fulltrue\NAT@citetp}{\footnotesize\HN\NAT@fullfalse\NAT@citetp}}
+\makeatother
 
 \defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Times New Roman}
+\setmainfont{Chaparral Pro}
 
 \setcounter{secnumdepth}{2}
 
-\titleformat{\section}{\HN\large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\HN\normalsize\bfseries}{\thesubsection}{3pt}{}
-\titleformat{\subsubsection}[runin]{\HN\small\bfseries}{\thesubsubsection}{3pt}{}
+\titleformat{\section}{\Gotham\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\Gotham\normalsize\bfseries}{\thesubsection}{3pt}{}
+\titleformat{\subsubsection}[runin]{\Gotham\small\bfseries}{\thesubsubsection}{3pt}{}[~~~~]
 
 
 \renewcommand{\bibfont}{\scriptsize}
