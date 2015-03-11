@@ -94,10 +94,8 @@ $body$
 
 {\tiny
 \bibliography{$biblio-files$}
-\bibliographystyle{agu08_nodoi}
+\bibliographystyle{$bibstyle$}
 %/Users/Daven/Resources/Papers/BibTeX/styles/agu08
 }
 
 \end{document}
-
-
