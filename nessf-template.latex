@@ -100,12 +100,14 @@
 
 $body$
 
-\twocolumn
+\begin{multicols}{2}
 
 {\tiny
 \bibliography{$biblio-files$}
 \bibliographystyle{$bibstyle$}
 %/Users/Daven/Resources/Papers/BibTeX/styles/agu08
 }
+
+\end{multicols}
 
 \end{document}
