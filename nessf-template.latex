@@ -17,6 +17,8 @@
 \usepackage{multicol}
 \usepackage{longtable}
 \usepackage[font=footnotesize]{caption}
+\usepackage{multirow}
+\usepackage{array,booktabs}
 
 \newfontfamily\HNLight[
    Ligatures=TeX,
@@ -73,11 +75,11 @@
 %\usepackage{natbib}
 \usepackage[numbers,sort&compress]{natbib}
 
-\makeatletter
-\DeclareRobustCommand\citep
-    {\begingroup\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
-     \@ifstar{\footnotesize\HN\NAT@fulltrue\NAT@citetp}{\footnotesize\HN\NAT@fullfalse\NAT@citetp}}
-\makeatother
+%\makeatletter
+%\DeclareRobustCommand\citep
+    %{\begingroup\NAT@swatrue\let\NAT@ctype\z@\NAT@partrue
+     %\@ifstar{\footnotesize\GothamLight\NAT@fulltrue\NAT@citetp}{\footnotesize\GothamLight\NAT@fullfalse\NAT@citetp}}
+%\makeatother
 
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Chaparral Pro}
@@ -94,7 +96,7 @@
 
 \begin{document}
 
-\noindent{\large\HN\textbf{$title$}}
+\noindent{\large\Gotham\textbf{$title$}}
 
 $body$
 
