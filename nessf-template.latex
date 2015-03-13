@@ -110,4 +110,8 @@ $body$
 
 \end{multicols}
 
+$if(appendix)$
+\include{$appendix$}
+$endif$
+
 \end{document}
