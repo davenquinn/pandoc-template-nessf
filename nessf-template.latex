@@ -14,9 +14,11 @@
 \usepackage{tabularx}
 \usepackage{float}
 \usepackage{paralist}
+\usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{longtable}
-\usepackage[font=footnotesize]{caption}
+\usepackage{setspace}
+\usepackage[font={footnotesize},skip=0pt]{caption}
 \usepackage{multirow}
 \usepackage{array,booktabs}
 
@@ -65,6 +67,9 @@
 %\renewcommand{\bibsection}{\subsubsection*{\refname}}
 %\newcommand{\tild}{\texttildelow}
 
+\setlist[itemize]{leftmargin=*}
+\setlist{nolistsep}
+
 \newcommand{\figp}[1]{[Figure \ref{fig:#1}]}
 \newcommand{\figt}[1]{Figure \ref{fig:#1}}
 \newcommand{\tabref}[1]{[Table \ref{tab:#1}]}
@@ -73,7 +78,7 @@
 
 %\usepackage[super]{natbib}
 %\usepackage{natbib}
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[numbers,compress]{natbib}
 
 %\makeatletter
 %\DeclareRobustCommand\citep
@@ -94,9 +99,19 @@
 \renewcommand{\bibfont}{\scriptsize}
 \setlength{\bibsep}{0pt}
 
+\setlength{\emergencystretch}{2pt}
+
 \begin{document}
 
-\noindent{\large\Gotham\textbf{$title$}}
+$if(title)$
+{
+\begin{spacing}{0.8}\noindent\Gotham\Large\textbf{$title$}\end{spacing}
+
+\noindent\GothamLight\normalsize\textbf{$author$}\\
+$if(affiliation)$\GothamLight\footnotesize{$affiliation$}$endif$
+}
+\vspace{10pt}
+$endif$
 
 $body$
 
