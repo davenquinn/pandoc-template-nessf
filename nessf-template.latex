@@ -88,13 +88,13 @@
 
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Chaparral Pro}
+\setsansfont{Gotham Book}
 
 \setcounter{secnumdepth}{2}
 
 \titleformat{\section}{\Gotham\large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\Gotham\normalsize\bfseries}{\thesubsection}{3pt}{}
 \titleformat{\subsubsection}[runin]{\Gotham\small\bfseries}{\thesubsubsection}{3pt}{}[~~~~]
-
 
 \renewcommand{\bibfont}{\scriptsize}
 \setlength{\bibsep}{0pt}
