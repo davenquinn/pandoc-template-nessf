@@ -13,6 +13,7 @@
 \usepackage{ifthen}
 \usepackage{tabularx}
 \usepackage{float}
+\usepackage{figmisc}
 \usepackage{paralist}
 \usepackage{enumitem}
 \usepackage{multicol}
